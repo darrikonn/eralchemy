@@ -1,3 +1,4 @@
 psycopg2-binary==2.9.2
 pygraphviz==1.7
 SQLAlchemy==1.4.31
+pandoc==2.0.1
