@@ -34,8 +34,8 @@ def build_and_upload():
     Popen([sys.executable, 'setup.py', 'bdist_wheel', '--universal'], stdout=PIPE).wait()
     Popen([sys.executable, 'setup.py', 'sdist'], stdout=PIPE).wait()
     pypi_pwd = getpass(prompt='Pypi Password: ')
-    Popen(['twine', 'upload', 'dist/*', '-u', 'alexis.benoist', '-p', pypi_pwd]).wait()
-    Popen(['open', 'https://pypi.python.org/pypi/ERAlchemy'])
+    #  Popen(['twine', 'upload', 'dist/*', '-u', 'alexis.benoist', '-p', pypi_pwd]).wait()
+    #  Popen(['open', 'https://pypi.python.org/pypi/ERAlchemy'])
     Popen(['git', 'tag'], stdout=PIPE).communicate()[0].splitlines()
     Popen(['git', 'push', '--tags']).wait()
 
